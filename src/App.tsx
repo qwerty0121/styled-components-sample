@@ -14,7 +14,7 @@ function App() {
   }
   const Text = styled.span<TextProps>`
     color: ${(props) => props.color ? props.color : 'red'};
-    font-weight: ${(props) => props.bold ? 'bold' : 'normal'}
+    font-weight: ${(props) => props.bold ? 'bold' : 'normal'};
   `
   return (
     <div className="App">
