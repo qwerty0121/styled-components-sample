@@ -16,6 +16,15 @@ function App() {
     color: ${(props) => props.color ? props.color : 'red'};
     font-weight: ${(props) => props.bold ? 'bold' : 'normal'};
   `
+
+  type Text2Props = {
+    color?: string,
+    bold?: boolean
+  }
+  const Text2 = styled.span<Text2Props>`
+    color: ${(props) => props.color ? props.color : 'red'};
+    font-weight: ${(props) => props.bold ? 'bold' : 'normal'};
+  `
   return (
     <div className="App">
       <VerticalPanel>
@@ -23,6 +32,7 @@ function App() {
         <Text color="green">colorを指定</Text>
         <Text bold color="green">color/boldを指定</Text>
         <Text color="green" bold>color/boldを指定</Text>
+        <Text2 color="green" bold>color/boldを指定</Text2>
       </VerticalPanel>
     </div>
   )
